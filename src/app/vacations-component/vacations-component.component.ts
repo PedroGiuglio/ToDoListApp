@@ -55,16 +55,11 @@ export class VacationsComponentComponent {
 
 
   ToDoList:any[] = [
-    { nombre: "Limpiar habitación", idTarea: 1, completa: true, seleccionado: false },
-    { nombre: "Arenero de gato", idTarea: 2, completa: false, seleccionado: false },
-    { nombre: "Barrer living", idTarea: 3, completa: true, seleccionado: false },
-    { nombre: "Regar plantas", idTarea: 4, completa: true, seleccionado: false },
-    { nombre: "Lavar ropa", idTarea: 5, completa: false, seleccionado: false },
-    { nombre: "Cocinar torta", idTarea: 6, completa: true, seleccionado: false },
-    { nombre: "Lavar platos", idTarea: 7, completa: true, seleccionado: false },
-    { nombre: "Pintar baño", idTarea: 8, completa: false, seleccionado: false },
-    { nombre: "Colocar espejo", idTarea: 9, completa: true, seleccionado: false },
-    { nombre: "Colocar espejo", idTarea: 9, completa: true, seleccionado: false }
+    { nombre: "Preparar valija", idTarea: 1, completa: true, seleccionado: false },
+    { nombre: "Cambiar pasajes", idTarea: 2, completa: false, seleccionado: false },
+    { nombre: "Comprar ticket", idTarea: 3, completa: true, seleccionado: false },
+    { nombre: "Pesar paquete", idTarea: 4, completa: true, seleccionado: false },
+    { nombre: "Pagar seguro", idTarea: 5, completa: false, seleccionado: false },
   ];
 
 
