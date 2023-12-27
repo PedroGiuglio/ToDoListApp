@@ -1,0 +1,525 @@
+
+.outer{
+    height: 100vh;
+    background: linear-gradient(to top, #c9c9ff 50%, #6e6ef6) no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel-heading{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#forget{
+    min-width: 100px;
+    margin-left: auto;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.form-inline label{
+    padding-left: 10px;
+    margin:0;
+    cursor: pointer;
+}
+
+.btn{
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.panel{
+    min-height: 380px;
+    box-shadow: 20px 20px 80px rgb(218, 218, 218);
+    border-radius: 12px;
+    margin-top: 100px;
+}
+
+
+.input-field {
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    color: #4343ff;
+}
+
+.input-fielld.error{
+    border:1px solid red;
+    color: red;
+}
+
+.errorTwo{
+    border:1px solid red;
+    color: red;
+}
+
+input[type='text'],
+input[type='password']{
+    border: none;
+    outline: none;
+    box-shadow: none;
+    width: 100%;
+}
+
+.fa-eye-slash.btn{
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+}
+
+.bordert {
+    border-top: 1px solid #aaa;
+    position: relative;
+}
+
+.bordert:after {
+    content: "or connect with";
+    position: absolute;
+    top: -13px;
+    left: 33%;
+    background-color: #fff;
+    padding: 0 8px;
+}
+
+.userLogin{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.userLogin p{
+    font-size: 15px;
+    color: rgb(93, 93, 93);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.imgProfile{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+}
+
+.firstLine{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.buttonExit{
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+}
+
+.buttonExit button{
+    background-color: transparent;
+    border: none;
+}
+/* MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+  }
+  
+  .modal.show {
+    display: block;
+  }
+  
+  /* Estilo para el spinner */
+  mat-progress-spinner {
+    position: absolute;
+    color: red;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.hy{
+    color: gray;
+    background-color: red;
+}
+
+.buttonInline{
+    display: flex;
+    flex-direction: row;
+}
+
+/*PROBAMOS*/
+
+.prueba{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url('images/wood.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: #aaa;
+  }
+  
+  .hola {
+    display: flex;
+    height: 80vh;
+    width: 80%;
+    background-color: #e7e8e8;
+    border-radius: 10px;
+  }
+  
+  .hola .column-1 {
+    flex: 20%; /* La primera columna ocupa el 5% del ancho */
+    padding: 10px; /* Añade margen si es necesario */
+    display: flex;
+    flex-direction: column;
+    align-items:left;
+  }
+  
+  
+  .sectionButton{
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Centra verticalmente los elementos hijos */
+    background-color: red;
+    margin-right: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 20px;
+  }
+  
+  .sectionButton svg {
+    width: 20px; /* Ajusta el ancho del SVG según tus necesidades */
+    height: 20px; /* Ajusta la altura del SVG según tus necesidades */
+    margin-right: 20px;
+  }
+  
+  .sectionButton p{
+    margin: 0;
+  }
+  
+  .sectionButton:hover{
+    color: rgb(98, 87, 255);
+  }
+  
+  .work{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .buttons .sectionButton .work .valorRecibido{
+    margin-left: 15px;
+    color: gray;
+  }
+
+  .buttonNav{
+    background-color: aquamarine;
+    width: 40px; /* Define el ancho del botón */
+    height: 40px;
+    border: none; /* Quita el borde del botón */
+    border-radius: 50%; /* Establece el radio para hacerlo circular */
+  }
+  
+  .hola .column-2 {
+    flex: 80%; /* La segunda columna ocupa el 95% del ancho */
+    padding: 10px; /* Añade margen si es necesario */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+  }
+  
+  .hola .homeWork {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    background-image: url('images/work.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+  
+  .hola .home {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    background-image: url('images/home.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+
+  .hola .homeVacation {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    background-image: url('images/wood.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+
+  .homeWork h1{
+      text-align: left;
+      color: white;
+      font-size: 50px;
+      margin-left: 50px;
+      margin-top: 50px;
+    }
+  
+  .homeWork h5{
+      color: white;
+      font-size: 25px;
+      margin-left: 50px;
+    }
+
+    .home h1{
+        text-align: left;
+        color: white;
+        font-size: 50px;
+        margin-left: 50px;
+        margin-top: 50px;
+      }
+    
+    .home h5{
+        color: white;
+        font-size: 25px;
+        margin-left: 50px;
+      }
+
+      .homeVacation h1{
+        text-align: left;
+        color: white;
+        font-size: 50px;
+        margin-left: 50px;
+        margin-top: 50px;
+      }
+    
+    .homeVacation h5{
+        color: white;
+        font-size: 25px;
+        margin-left: 50px;
+      }
+
+    .sectionItems{
+    height: 400px;
+    margin-top: -15px;
+  }
+  
+  .item{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 80%;
+      height: 60px;
+      font-size: 18px;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      border-radius: 10px;
+      background-color: #ffffff;
+      margin-left: 50px;
+      list-style: none;
+  }
+  
+  .item .sectionTarea{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+  
+  .item .id{
+    color: gray;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  .btnSwitch{
+      height: 20px;
+  }
+  
+  .guion{
+      height: 3px;
+      background-color: black;
+  }
+  
+  .color-rojo{
+      background-color:red;
+  }
+  
+  .color-verde{
+      background-color: green;
+  }
+  
+  .font-tachado{
+      text-decoration: line-through;
+      color: rgb(0, 0, 0);
+  }
+  
+  .btn{
+    margin-top: 3px;
+  }
+  
+.transparent-button .buttonAddTarea{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    text-align: center;
+    width: 100%;
+}
+
+.transparent-button .buttonAddTarea .more{
+    font-size: 40px;
+    margin-top: 10px;
+    margin-left: -10px;
+}
+
+.transparent-button .buttonAddTarea .add-text{
+    margin-left: 40px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+  .modalTarea{
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  .modal-dialog {
+     width: 700px;
+     font-weight: bold;
+    }
+  
+    .transparent-button {
+      background-color: rgba(0, 0, 0, 0.5); /* Color gris con opacidad 0.5 */
+      color: #fff; /* Color del texto (blanco en este caso) */
+      padding: 10px 20px; /* Ajusta el relleno según tus necesidades */
+      border: none; /* Quita el borde si lo deseas */
+      cursor: pointer; /* Cambia el cursor al pasar por encima del botón */
+      border-radius: 5px; /* Bordes redondeados */
+      width: 80%;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      margin-left: 50px;
+    }
+  
+    .more {
+      font-size: 30px; /* Tamaño más grande para el símbolo '+' */
+      margin-top: 10px;
+      margin-right: 100px; /* Ajusta el margen entre el símbolo y el texto */
+    }
+    
+    .add-text-left {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .text-left {
+      text-align: left; /* Alinea el texto a la izquierda */
+    }
+    
+    .transparent-button:hover {
+      background-color: rgba(169, 169, 169, 0.7); /* Cambia la opacidad al pasar el cursor */
+    }
+  
+    .sectionTitle{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .buttonExit button{
+      color: white;
+      margin-left: -20px;
+    }
+  
+    .buttonExit button:hover {
+      background-color: rgb(165, 165, 165);
+    }
+  
+    .star-button {
+      background-color: transparent; /* Fondo transparente */
+      border: none; /* Sin borde */
+      font-size: 30px; /* Tamaño de fuente */
+      color: rgb(150, 150, 150); /* Color de la estrella */
+      cursor: pointer;
+    }
+    
+    /* Cambia el color de la estrella al pasar el cursor por encima */
+    .star-button:hover {
+      color: rgb(255, 221, 0); /* Cambia el color al pasar el cursor */
+    }
+  
+    .mi-clase{
+      background-color:	#FFD700;
+    }
+  
+    .mi-clase .star-button:hover{
+      color: white;
+    }
+  
+    .bi-trash:hover{
+      color: red;
+    }
+  
+  
+    .filtersButton{
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      height: 150px;
+    }
+  
+  
+    .filtersButton .btnDestacado{
+      display: flex;
+      flex-direction: row;
+      justify-content: right;
+      width: 50%;
+      margin-left: 430px;
+    }
+  
+    .btnDestacado .btnPagination{
+      height: 5px;
+    }
+ 
+    
+    .imgProfile{
+      background-color: red;
+    }
