@@ -1,3 +1,603 @@
+@media (max-width: 576px) {
+
+  .outer{
+    height: 100vh;
+    background: linear-gradient(to top, #c9c9ff 50%, #6e6ef6) no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel-heading{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#forget{
+    min-width: 100px;
+    margin-left: auto;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.form-inline label{
+    padding-left: 10px;
+    margin:0;
+    cursor: pointer;
+}
+
+.btn{
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.panel{
+    min-height: 380px;
+    box-shadow: 20px 20px 80px rgb(218, 218, 218);
+    border-radius: 12px;
+    margin-top: 100px;
+}
+
+
+.input-field {
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    color: #4343ff;
+}
+
+.input-fielld.error{
+    border:1px solid red;
+    color: red;
+}
+
+.errorTwo{
+    border:1px solid red;
+    color: red;
+}
+
+input[type='text'],
+input[type='password']{
+    border: none;
+    outline: none;
+    box-shadow: none;
+    width: 100%;
+}
+
+.fa-eye-slash.btn{
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+}
+
+.bordert {
+    border-top: 1px solid #aaa;
+    position: relative;
+}
+
+.bordert:after {
+    content: "or connect with";
+    position: absolute;
+    top: -13px;
+    left: 33%;
+    background-color: #fff;
+    padding: 0 8px;
+}
+
+
+
+  /*PROBAMOS*/
+
+.prueba{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hola {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.column-1{
+  height: 35vh;
+}
+
+.sectionLogin{
+  display: flex;
+  flex-direction: column;
+  background-image:url('images/wavess.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.userLogin{
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.userLogin .userNombre{
+  margin-left: 15px;
+  font-size: 18px;
+}
+
+.userLogin .userNombre span{
+  font-weight: bold;
+}
+
+
+.imgProfile{
+  margin-left: 15px;
+  width: 50px;
+  height: 50px;
+  background-color: none;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: white; */
+}
+
+.buttons .seccionHora{
+  display: flex;
+  margin-left: 25px;
+}
+
+.buttons .seccionHora .horaFormateada{
+  width: 200px;
+  height: 25px;
+  margin-left: 25px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  border:none;
+  background-color: rgb(251,251,251);
+  font-weight: bold;
+  color: black;
+}
+
+.buttons h4{
+  color: black;
+  font-weight: bold;
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+.rutas{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+}
+
+.rutas .sectionButton{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  background-color: #0695fd;
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-left: 25px;
+}
+
+.sectionButton svg {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 10px;
+}
+
+.sectionButton p{
+  margin: 0;
+}
+
+.sectionButton:hover{
+  color: rgb(98, 87, 255);
+}
+
+.column-2{
+  height: 75vh;
+}
+
+.work{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.buttons .sectionButton .work .valorRecibido{
+  color: rgb(181, 181, 181);
+  font-size: 15px;
+}
+
+.buttonNav{
+ display: none;
+}
+
+.hola .homeWork {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  background-image: url('images/work.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.hola .home {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  background-image: url('images/home.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.hola .homeVacation {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  background-image: url('images/wood.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.homeWork .sectionTitle{
+  height: 10vh;
+}
+
+
+.homeWork h1{
+    color: white;
+    font-size: 50px;
+    width: 100%;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+.homeWork h5{
+    color: white;
+    font-size: 25px;
+  }
+
+
+.home .sectionTitle{
+    height: 10vh;
+}
+  
+  
+.home h1{
+  color: white;
+  font-size: 50px;
+  width: 100%;
+  margin-top: 15px;
+  text-align: center;
+}
+  
+.home h5{
+      color: white;
+      font-size: 25px;
+}
+
+
+.homeVacation .sectionTitle{
+  height: 10vh;
+}
+
+.homeVacation h1{
+      color: white;
+      font-size: 50px;
+      width: 100%;
+      margin-top: 15px;
+      text-align: center;
+}
+  
+.homeVacation h5{
+    color: white;
+    font-size: 25px;
+}
+
+.sectionItems{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.sectionItems .item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    font-size: 18px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    list-style: none;
+    height: 50px;
+    border-radius: 5px;
+    box-shadow: 0px 7px 5px 1px rgba(0,0,0,0.52);
+    -webkit-box-shadow: 0px 7px 5px 1px rgba(0,0,0,0.52);
+    -moz-box-shadow: 0px 7px 5px 1px rgba(0,0,0,0.52);
+}
+
+.item .first{
+  width: 70%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-align: left;
+}
+
+
+.item label{
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+ .tareas{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+
+.btnSwitch{
+    height: 20px;
+}
+
+.guion{
+    height: 3px;
+    background-color: black;
+}
+
+.color-rojo{
+    background-color:red;
+}
+
+.color-verde{
+    background-color: green;
+}
+
+.font-tachado{
+    text-decoration: line-through;
+    color: rgb(115, 115, 115);
+}
+
+.btn{
+  margin-top: 3px;
+}
+
+.areaButton{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.transparent-button {
+    background-color: rgba(0, 0, 0, 0.5); /* Color gris con opacidad 0.5 */
+    color: #fff; /* Color del texto (blanco en este caso) */
+    border: none; /* Quita el borde si lo deseas */
+    cursor: pointer; /* Cambia el cursor al pasar por encima del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    width: 80%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+
+  .transparent-button:hover {
+    background-color: rgba(169, 169, 169, 0.7); /* Cambia la opacidad al pasar el cursor */
+  }
+
+  .transparent-button .buttonAddTarea{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    margin-left: 15px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .transparent-button .buttonAddTarea .more{
+    font-size: 40px;
+    margin-top: 10px;
+    margin-left: -10px;
+  }
+  
+  .transparent-button .buttonAddTarea .add-text{
+    margin-left: 40px;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  .modalTarea{
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  .modal-dialog {
+     width: 700px;
+     font-weight: bold;
+    }
+
+
+  .sectionTitle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .heart-button {
+    display: inline-block;
+    background: none;
+    border: none;
+    color: rgb(148, 148, 148); /* Color inicial del corazón */
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease; /* Agregar transición de color para el efecto visual */
+  }
+
+  .heart-button:hover {
+    color: gold; /* Cambiar el color al pasar el mouse */
+  }
+
+  .heart-button.selected {
+    color: gold; /* Color de corazón seleccionado */
+  }
+
+  .heart-button span {
+    transform: scale(1, 0.8) ; /* Aplicar transformación para dar forma de corazón */
+    display: inline-block;
+    transition: transform 0.3s ease; /* Agregar transición para el efecto visual */
+  }
+  
+  .heart-button:hover span {
+    transform: scale(1.2, 0.8) rotate(45deg); /* Cambiar la transformación al pasar el mouse */
+  }
+  
+  .mi-clase{
+    background-color:	 gold !important;
+  }
+
+  .mi-clase .heart-button {
+    color: rgb(148, 148, 148); /* Color inicial del corazón */
+  }
+
+
+
+  .circle {
+    width: 15px; 
+    height: 15px;
+    margin-top: 2px; 
+    background-color: green; 
+    border-radius: 50%; 
+  }
+
+  .green-bg {
+    width: 10px; 
+    height: 10px;
+    background-color: green; 
+    border-radius: 50%; 
+  }
+  
+  .red-bg {
+    width: 10px; 
+    height: 10px;
+    border-radius: 50%; 
+    background-color: #fe391f;
+  }
+
+  .bi-trash:hover{
+    color: red;
+  }
+
+
+  .btnFilters{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    /* background-color: #030c39; */
+  }
+
+  .btnFilters .filtro{
+    margin-left: 25px;
+    color: white;
+    background-color: rgb(181, 181, 181);
+  }
+
+  .dropdown{
+    margin-right: 15px;
+    height: 45px;
+  }
+
+  .boxPagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .btnPagination{
+    background-color: rgba(0, 0, 0, 0.5); /* Color gris con opacidad 0.5 */
+    color: #fff; /* Color del texto (blanco en este caso) */
+    border: none; /* Quita el borde si lo deseas */
+    cursor: pointer; /* Cambia el cursor al pasar por encima del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    width: 25%;
+    height: 30px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+
+  .btnPagination svg{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .btnDestacado{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+}
+
+
+  /* @media (min-width: 1024px) { */
+  @media only screen and (min-width: 1200px){
 
 .outer{
     height: 100vh;
@@ -98,6 +698,19 @@ img{
     padding: 0 8px;
 }
 
+
+/* //DESDEACA// */
+
+
+
+.sectionLogin{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .userLogin{
     display: flex;
     flex-direction: row;
@@ -106,10 +719,13 @@ img{
 }
 
 .userLogin p{
-    font-size: 15px;
-    color: rgb(93, 93, 93);
-    font-weight: bold;
+    font-size: 20px;
+    color: white;
     margin-top: 10px;
+}
+
+.userLogin p span{
+  font-weight: bold;
 }
 
 .imgProfile{
@@ -118,6 +734,38 @@ img{
     object-fit: cover;
     border-radius: 50%;
     position: relative;
+    margin-left: 50px;
+}
+
+.seccionHora{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.seccionHora svg{
+  color: white;
+  height: 25px;
+  width: 25px;
+  margin-bottom: 15px;
+}
+
+.buttons .seccionHora .horaFormateada{
+  width: 200px;
+  height: 25px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  border:none;
+  background-color: rgb(251,251,251);
+  font-weight: bold;
+  color: black;
+}
+
+
+.buttons h4{
+  color: white;
+  font-weight: bold;
 }
 
 .firstLine{
@@ -179,49 +827,54 @@ img{
     height: 100vh;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* background-image: url('images/wood.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
-    background-color: #aaa;
+    background-color: #0695fd;
   }
   
   .hola {
-    display: flex;
-    height: 80vh;
+    height: 100vh;
     width: 80%;
-    background-color: #e7e8e8;
-    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
   
   .hola .column-1 {
-    flex: 20%; /* La primera columna ocupa el 5% del ancho */
-    padding: 10px; /* Añade margen si es necesario */
+    height: 80vh;
+    width: 30%;
     display: flex;
     flex-direction: column;
-    align-items:left;
+    justify-content: space-around;
+    align-items:center;
+    background-color: #030c39;
   }
   
-  
-  .sectionButton{
+  .rutas .sectionButton{
+    width: 120px;
+    height: 120px;
     display: flex;
-    flex-direction: row;
-    align-items: center; /* Centra verticalmente los elementos hijos */
-    background-color: red;
-    margin-right: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-size: 20px;
     text-decoration: none;
-    color: black;
-    margin-bottom: 20px;
+    color: white;
+    /* background-color: rgb(0, 0, 128); */
+    background-color: #0695fd;
+    border-radius: 5px;
+    box-shadow: 0px 4px 5px 1px rgba(0,0,0,0.18);
+    -webkit-box-shadow: 0px 4px 5px 1px rgba(0,0,0,0.18);
+    -moz-box-shadow: 0px 4px 5px 1px rgba(0,0,0,0.18);
+    margin-bottom: 10px;
   }
   
   .sectionButton svg {
-    width: 20px; /* Ajusta el ancho del SVG según tus necesidades */
-    height: 20px; /* Ajusta la altura del SVG según tus necesidades */
-    margin-right: 20px;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
   }
   
   .sectionButton p{
@@ -234,8 +887,11 @@ img{
   
   .work{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    height: 100%;
+    text-align: center;
   }
   
   .buttons .sectionButton .work .valorRecibido{
@@ -252,8 +908,7 @@ img{
   }
   
   .hola .column-2 {
-    flex: 80%; /* La segunda columna ocupa el 95% del ancho */
-    padding: 10px; /* Añade margen si es necesario */
+    width: 70%; /* La segunda columna ocupa el 95% del ancho */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -473,7 +1128,7 @@ img{
       background-color: rgb(165, 165, 165);
     }
   
-    .star-button {
+    .heart-button {
       background-color: transparent; /* Fondo transparente */
       border: none; /* Sin borde */
       font-size: 30px; /* Tamaño de fuente */
@@ -482,7 +1137,7 @@ img{
     }
     
     /* Cambia el color de la estrella al pasar el cursor por encima */
-    .star-button:hover {
+    .heart-button:hover {
       color: rgb(255, 221, 0); /* Cambia el color al pasar el cursor */
     }
   
@@ -490,7 +1145,7 @@ img{
       background-color:	#FFD700;
     }
   
-    .mi-clase .star-button:hover{
+    .mi-clase .heart-button:hover{
       color: white;
     }
   
@@ -499,11 +1154,14 @@ img{
     }
   
   
-    .filtersButton{
+    .btnFilters{
       display: flex;
       flex-direction: column;
-      justify-content: start;
-      height: 150px;
+      justify-content: center;
+      align-items: center;
+      background-color: #030c39;
+      border-color: #030c39;
+      height: 80vh;
     }
   
   
@@ -523,3 +1181,27 @@ img{
     .imgProfile{
       background-color: red;
     }
+
+    .boxPagination{
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .btnPagination{
+      background-color: rgba(0, 0, 0, 0.5); /* Color gris con opacidad 0.5 */
+      color: #fff; /* Color del texto (blanco en este caso) */
+      border: none; /* Quita el borde si lo deseas */
+      cursor: pointer; /* Cambia el cursor al pasar por encima del botón */
+      border-radius: 5px; /* Bordes redondeados */
+      width: 15%;
+      height: 30px;
+      margin-right: 5px;
+      margin-bottom: 10px;
+    }
+
+    .btnPagination svg{
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }

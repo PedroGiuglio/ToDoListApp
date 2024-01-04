@@ -19,10 +19,8 @@ CategoriasList:any[]=[1,2,3];
   ModalTarea:boolean = false;
   nombre:string = "";
   completa: boolean = true;
-  idTarea:number = 2;
-  idCategoria:number = 0;
-  selectedCategoriaId: number = 0;
-
+  seleccionado: boolean = false;
+  idTarea:number = 0;;
 
 
 
@@ -30,34 +28,22 @@ CategoriasList:any[]=[1,2,3];
       this.nombre=this.tar.nombre;
       this.idTarea=this.tar.idTarea;
       this.completa=this.tar.completa;
-      this.idCategoria=this.tar.idCategoria;
-      this.idTarea++;
+      this.seleccionado = this.tar.seleccionado;
   }
 
   addTarea(){
-       // Crear un nuevo objeto ToDoItem con los valores deseados
-       var val = {
+    if (this.nombre.trim() !== '') {
+      const nuevaTarea = {
         nombre: this.nombre,
         completa: this.completa,
-        idTarea: this.idTarea,
-        idCategoria:this.idCategoria
-      }
-      // this.servicio.addTarea(val).subscribe(res=>{
-      //   console.log("Agregado con exito: " + res)
-      // });  
-      // Restablecer los valores de idTarea, nombre y completa si es necesario
-      this.idTarea++;
-      this.nombre = '';
-      this.ToDoList.push(val);
-      console.log(val);
-      this.numeroTotal.emit(this.ToDoList.length);
-    }
+        idTarea: this.ToDoList.length > 0 ? this.ToDoList[this.ToDoList.length - 1].idTarea + 1 : 1,
+        seleccionado: false,
+      };
   
-
-  closeClick(){
-    console.log("je");
-    this.ModalTarea=false;
-  }
-
-
+      this.nombre = '';
+      console.log(nuevaTarea);
+      this.ToDoList.push(nuevaTarea);
+      this.ToDoList.length;
+    }
+    }
 }

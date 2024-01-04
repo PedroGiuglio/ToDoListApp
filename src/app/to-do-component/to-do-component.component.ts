@@ -24,8 +24,6 @@ export class ToDoComponentComponent {
   ngOnInit():void{
     this.getTurnos();
     console.log(this.ToDoList);
- 
-    // Formatea la fecha en el formato deseado (Friday, 16 September 2023)
     this.fechaActual = new Date();
     this.fechaFormateada = this.formatDate(this.fechaActual);
     console.log('Fecha actual formateada:', this.fechaFormateada);
@@ -66,11 +64,11 @@ export class ToDoComponentComponent {
     { nombre: "Remodularización código", idTarea: 9, completa: true, seleccionado: false }
   ];
 
-
+  cantidadTareas : number = this.ToDoList.length;
 
   ModalActivado:boolean = false;
   tar:any = "";
-  ModalTitle = "Titulo";
+  ModalTitle = "Ingrese nueva tarea";
   CategoriasList:any[]=[];
   fechaActual: Date = new Date();
   fechaFormateada: string = "";
@@ -82,10 +80,6 @@ export class ToDoComponentComponent {
   seleccionado: boolean = false;; 
 
   getTurnos(){
-    // this.servicio.getTareasWork().subscribe(data =>{
-    //   this.ToDoList = data;
-    //   console.log(data);
-    // })
     this.mostrarList;
     this.ToDoList;
     console.log(this.ToDoList);
@@ -93,20 +87,30 @@ export class ToDoComponentComponent {
   }
 
   AddClick(){
-    this.tar={
-      idTarea:3,
-      nombre:"",
-      completa:false
-    }
+    this.tar = {
+      idTarea: 0,
+      nombre: "",
+      completa: false,
+      seleccionado: false
+    };
+
     this.ModalActivado = true;
-    console.log(this.numeroDeElementos);
+    if (this.tar.nombre.trim() !== '') {
+      this.tar.idTarea = this.cantidadTareas + 1;
+      this.ToDoList.push(this.tar);
+      console.log(this.tar);
+      console.log("Hola");
+    }
+  }
+
+
+  refreshToDoList(){
+    this.ToDoList;
   }
 
   closeClick(){
     console.log("Cerro");
-    this.getTurnos();
-    this.ToDoList;
-    console.log(this.valorRecibido);
+    this.refreshToDoList();
   }
 
   eliminarTarea(idTarea:number){
@@ -138,18 +142,27 @@ export class ToDoComponentComponent {
    itemsPerPage = 5; // Número de elementos por página
    currentPage = 1;
 
-   previousPage() {
-    if (this.currentPage > 1) {
-        this.currentPage--;
-    }
+  
+
+itemsToShow = 5;
+
+previousPage() {
+  if (this.currentPage > 1) {
+    this.currentPage--;
+    this.itemsToShow -= 5; // Decrease the number of items shown
+  }
 }
 
 nextPage() {
-    const maxPage = Math.ceil(this.ToDoList.length / this.itemsPerPage);
-    if (this.currentPage < maxPage) {
-        this.currentPage++;
-    }
+  const maxPage = Math.ceil(this.ToDoList.length / this.itemsPerPage);
+
+  if (this.currentPage < maxPage) {
+    this.currentPage++;
+    this.itemsToShow += 5; // Aumenta la cantidad de elementos mostrados
+  }
 }
+
+
 
    buttonExit(){
     console.log(this.login.sharedData);
@@ -168,6 +181,7 @@ nextPage() {
   toggleClase(campo: any) {
     if (campo.hasOwnProperty('seleccionado')) {
       campo.seleccionado = !campo.seleccionado;
+      console.log(`Elemento seleccionado: ${campo.seleccionado}`);
 
       if (campo.seleccionado) {
         // Agregar al array si está seleccionado
@@ -187,10 +201,15 @@ nextPage() {
 
 
   showDestacados(){
-    if(this.ListDestacados.length == 0){
+    if (this.ListDestacados.length === 0) {
       alert("No hay elementos en la lista de favoritos");
-    }else{
-      console.log(this.ListDestacados)
+    } else {
+      console.log(this.ListDestacados);
+  
+      // Restablece la página y los elementos a mostrar
+      this.currentPage = 1;
+      this.itemsToShow = 5;
+  
       this.mostrarList = false;
       this.mostrarCompletos = false;
       this.showListDestacados = true;
@@ -203,6 +222,7 @@ nextPage() {
   showCompletas(){
     this.mostrarList = false;
     this.showListDestacados = false;
+    this.mostrarIncompletos = false;
     this.mostrarCompletos = true;
     this.ToDoList.forEach(tarea => {
       if (tarea.completa) {

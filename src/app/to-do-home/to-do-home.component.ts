@@ -53,7 +53,6 @@ export class ToDoHomeComponent {
   }
 
 
-
   ToDoList:any[] = [
     { nombre: "Limpiar habitación", idTarea: 1, completa: true, seleccionado: false },
     { nombre: "Arenero de gato", idTarea: 2, completa: false, seleccionado: false },
@@ -93,14 +92,23 @@ export class ToDoHomeComponent {
     
   }
 
+  cantidadTareas : number = this.ToDoList.length;
+
   AddClick(){
-    this.tar={
-      idTarea:3,
-      nombre:"",
-      completa:false
-    }
+    this.tar = {
+      idTarea: 0,
+      nombre: "",
+      completa: false,
+      seleccionado: false
+    };
+
     this.ModalActivado = true;
-    console.log(this.numeroDeElementos);
+    if (this.tar.nombre.trim() !== '') {
+      this.tar.idTarea = this.cantidadTareas + 1;
+      this.ToDoList.push(this.tar);
+      console.log(this.tar);
+      console.log("Hola");
+    }
   }
 
   closeClick(){
@@ -134,21 +142,27 @@ export class ToDoHomeComponent {
     console.log(valor);
    }
 
-
    itemsPerPage = 5; // Número de elementos por página
    currentPage = 1;
 
-   previousPage() {
-    if (this.currentPage > 1) {
-        this.currentPage--;
-    }
+  
+
+itemsToShow = 5;
+
+previousPage() {
+  if (this.currentPage > 1) {
+    this.currentPage--;
+    this.itemsToShow -= 5; // Decrease the number of items shown
+  }
 }
 
 nextPage() {
-    const maxPage = Math.ceil(this.ToDoList.length / this.itemsPerPage);
-    if (this.currentPage < maxPage) {
-        this.currentPage++;
-    }
+  const maxPage = Math.ceil(this.ToDoList.length / this.itemsPerPage);
+
+  if (this.currentPage < maxPage) {
+    this.currentPage++;
+    this.itemsToShow += 5; // Aumenta la cantidad de elementos mostrados
+  }
 }
 
    buttonExit(){
@@ -164,8 +178,8 @@ nextPage() {
   ListDestacados:any []= [];
   
 
-  //Button Star ListDestacados //
-  toggleClase(campo: any) {
+   //Button Star ListDestacados //
+   toggleClase(campo: any) {
     if (campo.hasOwnProperty('seleccionado')) {
       campo.seleccionado = !campo.seleccionado;
 
@@ -185,13 +199,18 @@ nextPage() {
   }
 
 
-
   showDestacados(){
-    if(this.ListDestacados.length == 0){
+    if (this.ListDestacados.length === 0) {
       alert("No hay elementos en la lista de favoritos");
-    }else{
-      console.log(this.ListDestacados)
+    } else {
+      console.log(this.ListDestacados);
+  
+      // Restablece la página y los elementos a mostrar
+      this.currentPage = 1;
+      this.itemsToShow = 5;
+  
       this.mostrarList = false;
+      this.mostrarCompletos = false;
       this.showListDestacados = true;
     }
   }

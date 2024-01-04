@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TurnosComponentComponent } from './turnos-component/turnos-component.component';
 import { SerivicioPruebaService } from './serivicio-prueba.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ToDoComponentComponent } from './to-do-component/to-do-component.component';
@@ -18,19 +16,20 @@ import { SignupComponent } from './signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { VacationsComponentComponent } from './vacations-component/vacations-component.component';
+import { ListFilterComponentComponent } from './list-filter-component/list-filter-component.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TurnosComponentComponent,
     ToDoComponentComponent,
     AddTareaComponent,
     ToDoHomeComponent,
     AddTareaHomeComponent,
     LoginComponent,
     SignupComponent,
-    VacationsComponentComponent
+    VacationsComponentComponent,
+    ListFilterComponentComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +39,7 @@ import { VacationsComponentComponent } from './vacations-component/vacations-com
     NgbModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
   ],
   providers: [SerivicioPruebaService,  { provide: LOCALE_ID, useValue: 'es-ES' }],
   bootstrap: [AppComponent],

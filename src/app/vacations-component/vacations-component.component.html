@@ -1,231 +1,158 @@
 <div class="prueba">
-    <div class="hola">
-    <div class="column-1">
-      <div class="buttons">
-    
-        <div class="mx-3 my-2 py-2">
-          <div class="text-center py-3 userLogin">
-            <div class="px-2">
-              <img src="https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png" alt="" class="imgProfile">
-            </div>
-            <p>{{receivedData.username}}</p>
-          </div>
+  <div class="hola">
+  <div class="column-1">
+    <div class="buttons">
+  
+      <div class="sectionLogin">
+        <div class="userLogin">
+          <p class="userNombre">Hello! <br> <span>{{receivedData.username}}</span></p>
+            <img src="https://cdn.pixabay.com/photo/2019/08/11/18/59/icon-4399701_1280.png" alt="" class="imgProfile">
+            <!-- <p>{{receivedData.username}}</p> -->
         </div>
-    
-        <button class="sectionButton num1 mx-2 py-2" style="border: none; background-color: transparent;" routerLink="/work">
+        <div class="seccionHora">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="currentColor" class="bi bi-calendar2-week-fill" viewBox="0 0 16 16">
+            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5m9.954 3H2.545c-.3 0-.545.224-.545.5v1c0 .276.244.5.545.5h10.91c.3 0 .545-.224.545-.5v-1c0-.276-.244-.5-.546-.5M8.5 7a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM3 10.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5m3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/>
+          </svg>
+          <button class="horaFormateada">{{fechaFormateada}}</button>
+        </div>
+        </div>
+        <h4>Category</h4>
+        <div class="rutas">
+        <div class="sectionButton num1"  routerLink="/work">
           <div class="work">
             <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
               <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
               <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
             </svg>
-          <p>Work</p>
-        </div>
-        </button>
-    
-        <button class="sectionButton num1 mx-2 py-2" routerLink="/prueba" style="border: none; background-color: transparent;">
-          <div class="work">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
-            <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
-          </svg>
-          <p>Home</p>
-        </div>
-        </button>
-    
-        <button class="sectionButton num1 mx-2 py-2" routerLink="/vacaciones" style="border: none; background-color: transparent;">
-          <div class="work">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-airplane" viewBox="0 0 16 16">
-            <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Zm.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1c-.213 0-.458.158-.678.599Z"/>
-          </svg>
-          <p>Vacations</p>
-          <p class="valorRecibido">{{valorRecibido}}</p>
-        </div>
-        </button>
-    
-      </div>
-    </div>
-    
-    <div class="column-2 homeVacation"> 
-      <div class="firstLine">
-        <div class="sectionTitle">
-          <h1>Vacations<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-airplane-engines" viewBox="0 0 16 16" style="margin-left: 10px;">
-            <path d="M8 0c-.787 0-1.292.592-1.572 1.151A4.347 4.347 0 0 0 6 3v3.691l-2 1V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.191l-1.17.585A1.5 1.5 0 0 0 0 10.618V12a.5.5 0 0 0 .582.493l1.631-.272.313.937a.5.5 0 0 0 .948 0l.405-1.214 2.21-.369.375 2.253-1.318 1.318A.5.5 0 0 0 5.5 16h5a.5.5 0 0 0 .354-.854l-1.318-1.318.375-2.253 2.21.369.405 1.214a.5.5 0 0 0 .948 0l.313-.937 1.63.272A.5.5 0 0 0 16 12v-1.382a1.5 1.5 0 0 0-.83-1.342L14 8.691V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v.191l-2-1V3c0-.568-.14-1.271-.428-1.849C9.292.591 8.787 0 8 0ZM7 3c0-.432.11-.979.322-1.401C7.542 1.159 7.787 1 8 1c.213 0 .458.158.678.599C8.889 2.02 9 2.569 9 3v4a.5.5 0 0 0 .276.447l5.448 2.724a.5.5 0 0 1 .276.447v.792l-5.418-.903a.5.5 0 0 0-.575.41l-.5 3a.5.5 0 0 0 .14.437l.646.646H6.707l.647-.646a.5.5 0 0 0 .14-.436l-.5-3a.5.5 0 0 0-.576-.411L1 11.41v-.792a.5.5 0 0 1 .276-.447l5.448-2.724A.5.5 0 0 0 7 7V3Z"/>
-          </svg></h1>
-          <h5>{{fechaFormateada}}</h5>
-        </div>
-        <div class="buttonExit">
-          <button (click)="buttonExit()"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="35" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
-            <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
-          </svg></button>
-        </div>
-      </div> 
-    
-      <div class="filtersButton">
-      <div class="btnDestacado">
-        <div class="dropdown" style="height: 50px;">
-          <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
-              <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
-            </svg> Filters
-          </button>
-          <ul class="dropdown-menu">
-            <li (click)="showDestacados()"><a class="dropdown-item" href="javascript:void(0)">Favoritos &#9733; </a></li>
-            <li (click)="showCompletas()"><a class="dropdown-item" href="javascript:void(0)">Completadas <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
-              <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
-            </svg></a></li>
-            <li (click)="showIncompletas()"><a class="dropdown-item" href="javascript:void(0)">Incompletas <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-exclamation-fill" viewBox="0 0 16 16">
-              <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zM8 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-            </svg></a></li>
-          </ul>
+            <div>
+              <p>Work</p>
+              <p class="valorRecibido">{{valorRecibido}} Tasks</p>
+            </div>
         </div>
       </div>
-      <div class="btnDestacado" style="height: 50px;">
-        <nav aria-label="Page navigation btnPagination">
-          <ul class="pagination">
-              <li class="page-item" (click)="previousPage()">
-                  <a class="page-link" href="javascript:void(0)">Previous</a>
-              </li>
-              <li class="page-item"><a class="page-link" href="javascript:void(0)">{{currentPage}}</a></li>
-              <li class="page-item" (click)="nextPage()">
-                  <a class="page-link" href="javascript:void(0)">Next</a>
-              </li>
-          </ul>
-      </nav>
-      </div>
-    
-      <div *ngIf="!mostrarList" class="btnDestacado" style="height: 40px; margin-top: -10px;">
-        <button class="btn btn-danger" (click)="clearFilters()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
-          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-          <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-        </svg> Clear Filters</button>
-      </div>
-    </div>
-    
-    <div class="sectionItems" *ngIf="mostrarList">
-      <!-- <ul *ngFor="let campo of ToDoList.slice(0, 6)" class="item" [class.mi-clase]="campo.seleccionado"> -->
-      <ul  *ngFor="let campo of ToDoList.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)" class="item" [class.mi-clase]="campo.seleccionado">
-    
-        <div class="form-check form-switch" style="width: 50%;">
-          <input class="form-check-input" style="width: 30px; height: 30px; margin-top: 5px;" type="checkbox"  [(ngModel)]="campo.completa" value="" id="flexCheckDefault">
-          <!-- <input class="form-check-input btnSwitch" type="checkbox" [(ngModel)]="campo.completa" id="flexSwitchCheckDefault"> -->
-          <div class="sectionTarea" style="margin-left: 20px;">
-          <label class="form-check-label" for="flexSwitchCheckDefault"  [ngClass]="{'font-tachado': campo.completa}">{{campo.nombre}}</label>
-          <li class="id">Id: {{campo.idTarea}}</li>   
-        </div>
-        </div>
-        <button class="btn" (click)="eliminarTarea(campo.idTarea)"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-          <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
-          <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
+  
+      <div class="sectionButton num1" routerLink="/home" style="background-color: #fe4878;">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+          <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z"/>
         </svg>
-      </button>
-      <button class="star-button" (click)="toggleClase(campo)">
-        &#9733; <!-- Código de estrella Unicode -->
-      </button>
-        <hr>
-      </ul>
-    </div>
-    
-    
-    <div class="sectionItems" *ngIf="showListDestacados">
-      <!-- <ul *ngFor="let campo of ToDoList.slice(0, 6)" class="item" [class.mi-clase]="campo.seleccionado"> -->
-      <ul  *ngFor="let campo of ListDestacados.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)" class="item" [class.mi-clase]="campo.seleccionado">
-    
-        <div class="form-check form-switch" style="width: 50%;">
-          <input class="form-check-input" style="width: 30px; height: 30px; margin-top: 5px;" type="checkbox"  [(ngModel)]="campo.completa" value="" id="flexCheckDefault">
-          <!-- <input class="form-check-input btnSwitch" type="checkbox" [(ngModel)]="campo.completa" id="flexSwitchCheckDefault"> -->
-          <div class="sectionTarea" style="margin-left: 20px;">
-          <label class="form-check-label" for="flexSwitchCheckDefault"  [ngClass]="{'font-tachado': campo.completa}">{{campo.nombre}}</label>
-          <li class="id">Id: {{campo.idTarea}}</li>   
-        </div>
-        </div>
-        <button class="btn" (click)="eliminarTarea(campo.idTarea)"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-          <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
-          <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
+        <p>Home</p>
+      </div>
+  
+      <div class="sectionButton num1" routerLink="/vacaciones" style="background-color: #ffc138;">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-airplane" viewBox="0 0 16 16">
+          <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Zm.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1c-.213 0-.458.158-.678.599Z"/>
         </svg>
-      </button>
-      <button class="star-button" (click)="toggleClase(campo)">
-        &#9733; <!-- Código de estrella Unicode -->
-      </button>
-        <hr>
-      </ul>
+        <p>Vacations</p>
+      </div>
     </div>
-    
-    <div class="sectionItems" *ngIf="mostrarCompletos">
-      <!-- <ul *ngFor="let campo of ToDoList.slice(0, 6)" class="item" [class.mi-clase]="campo.seleccionado"> -->
-      <ul  *ngFor="let campo of ListCompletas.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)" class="item" [class.mi-clase]="campo.seleccionado">
-    
-        <div class="form-check form-switch" style="width: 50%;">
-          <input class="form-check-input" style="width: 30px; height: 30px; margin-top: 5px;" type="checkbox"  [(ngModel)]="campo.completa" value="" id="flexCheckDefault">
-          <!-- <input class="form-check-input btnSwitch" type="checkbox" [(ngModel)]="campo.completa" id="flexSwitchCheckDefault"> -->
-          <div class="sectionTarea" style="margin-left: 20px;">
-          <label class="form-check-label" for="flexSwitchCheckDefault"  [ngClass]="{'font-tachado': campo.completa}">{{campo.nombre}}</label>
-          <li class="id">Id: {{campo.idTarea}}</li>   
-        </div>
-        </div>
-        <button class="btn" (click)="eliminarTarea(campo.idTarea)"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-          <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
-          <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
-        </svg>
-      </button>
-      <button class="star-button" (click)="toggleClase(campo)">
-        &#9733; <!-- Código de estrella Unicode -->
-      </button>
-        <hr>
-      </ul>
+  
     </div>
+  </div>
+  
+  
+<div class="btnFilters">
+  <div class="dropdown">
+    <button class="btn btn-light dropdown-toggle filtro" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Filters
+    </button>
+    <ul class="dropdown-menu">
+      <li (click)="showDestacados()"><a class="dropdown-item" href="javascript:void(0)">Favoritos &#9733; </a></li>
+      <li (click)="showCompletas()"><a class="dropdown-item" href="javascript:void(0)">Completadas <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-check-fill" viewBox="0 0 16 16">
+        <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+      </svg></a></li>
+      <li (click)="showIncompletas()"><a class="dropdown-item" href="javascript:void(0)">Incompletas <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-exclamation-fill" viewBox="0 0 16 16">
+        <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zM8 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+      </svg></a></li>
+    </ul>
+  </div>
 
-    <div class="sectionItems" *ngIf="mostrarIncompletos">
-      <!-- <ul *ngFor="let campo of ToDoList.slice(0, 6)" class="item" [class.mi-clase]="campo.seleccionado"> -->
-      <ul  *ngFor="let campo of ListIncompletas.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)" class="item" [class.mi-clase]="campo.seleccionado">
-    
-        <div class="form-check form-switch" style="width: 50%;">
-          <input class="form-check-input" style="width: 30px; height: 30px; margin-top: 5px;" type="checkbox"  [(ngModel)]="campo.completa" value="" id="flexCheckDefault">
-          <!-- <input class="form-check-input btnSwitch" type="checkbox" [(ngModel)]="campo.completa" id="flexSwitchCheckDefault"> -->
-          <div class="sectionTarea" style="margin-left: 20px;">
-          <label class="form-check-label" for="flexSwitchCheckDefault"  [ngClass]="{'font-tachado': campo.completa}">{{campo.nombre}}</label>
-          <li class="id">Id: {{campo.idTarea}}</li>   
-        </div>
-        </div>
-        <button class="btn" (click)="eliminarTarea(campo.idTarea)"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-          <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z"/>
-          <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z"/>
-        </svg>
-      </button>
-      <button class="star-button" (click)="toggleClase(campo)">
-        &#9733; <!-- Código de estrella Unicode -->
-      </button>
-        <hr>
-      </ul>
+  <div *ngIf="!mostrarList" class="btnDestacado" style="height: 45px">
+    <button class="btn btn-danger" (click)="clearFilters()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+      <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+    </svg> Clear Filters</button>
+  </div>
+
+</div>
+  
+ 
+<div class="column-2 homeVacation"> 
+  <div class="firstLine">
+    <div class="sectionTitle">
+      <h1>Vacations <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-airplane" viewBox="0 0 16 16">
+        <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849m.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1c-.213 0-.458.158-.678.599"/>
+      </svg></h1>
     </div>
-    
+  </div> 
+  
+  <div class="sectionItems" *ngIf="mostrarList">
+    <ul  *ngFor="let campo of ToDoList.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)" class="item"  [class.mi-clase]="campo.seleccionado">
+      <div class="form-check form-switch first">
+        <input class="form-check-input" type="checkbox"  [(ngModel)]="campo.completa" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexSwitchCheckDefault" style="margin-left: 10px;"  [ngClass]="{'font-tachado': campo.completa}">{{campo.nombre}}</label>
+      </div>
+      <div class="tareas">
+        <button class="heart-button" (click)="toggleClase(campo)">
+          <span>&#10084;</span> 
+        </button>
+      <div [ngClass]="{'green-bg': campo.completa, 'red-bg': !campo.completa}"></div>
+      </div>
+    </ul>
+  </div>
+  
+  <ng-container *ngIf="showListDestacados">
+    <app-list-filter-component *ngFor="let campo of ListDestacados.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)"
+                               [campo]="campo" (toggleClase)="toggleClase($event)" class="sectionItems">
+    </app-list-filter-component>
+  </ng-container>
+
+  <ng-container *ngIf="mostrarCompletos">
+    <app-list-filter-component *ngFor="let campo of ListCompletas.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)"
+                               [campo]="campo" (toggleClase)="toggleClase($event)" class="sectionItems">
+    </app-list-filter-component>
+  </ng-container>
+  
+  <ng-container *ngIf="mostrarIncompletos">
+    <app-list-filter-component *ngFor="let campo of ListIncompletas.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)"
+                               [campo]="campo" (toggleClase)="toggleClase($event)" class="sectionItems">
+    </app-list-filter-component>
+  </ng-container>
+
+  <div class="boxPagination">
+    <button class="btnPagination" (click)="previousPage()">Previous</button>
+    <button class="btnPagination" (click)="nextPage()">Next</button>
+  </div>
      
+  <div class="areaButton">
     <button class="transparent-button" (click)="AddClick()" data-bs-toggle="modal" data-bs-target="#exampleModal">
       <div class="buttonAddTarea">
         <div>
           <p class="more">+</p>
         </div>
         <div>
-        <p class="add-text">Add Tarea</p>
+        <p class="add-text">Add new task</p>
         </div>
       </div>
     </button>
     </div>
-    </div>
-    </div>
-    
-    <div class="containerr rounded-3 modalTarea modal-dialog">
-      <!-- Modal -->
-      <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-        <div class="modal-dialog modal-dialog-centered modal-xl">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">{{ModalTitle}}</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closeClick()"></button>
-            </div>
-            <div class="modal-body">
-              <app-add-tarea [tar]="tar" [ToDoList]="ToDoList"  (numeroTotal)="capturarValor($event)" *ngIf="ModalActivado"></app-add-tarea>
-            </div>
+
+  </div>
+  </div>
+  </div>
+  
+  <div class="containerr rounded-3 modalTarea modal-dialog">
+    <!-- Modal -->
+    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">{{ModalTitle}}</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closeClick()"></button>
+          </div>
+          <div class="modal-body">
+            <app-add-tarea [tar]="tar" [ToDoList]="ToDoList"  (numeroTotal)="capturarValor($event)" *ngIf="ModalActivado"></app-add-tarea>
           </div>
         </div>
       </div>
     </div>
+  </div>

@@ -1,0 +1,14 @@
+<ul  class="item mi-clase" [class.mi-clase]="campo.seleccionado">
+<div class="form-check form-switch first">
+    <input class="form-check-input" type="checkbox" [(ngModel)]="campo.completa" value="" id="{{ campo.id }}">
+    <label class="form-check-label" for="{{ campo.id }}" style="margin-left: 10px;" [ngClass]="{'font-tachado': campo.completa}">
+      {{ campo.nombre }}
+    </label>
+</div>
+  <div class="tareas">
+    <button class="heart-button" (click)="toggleClase.emit(campo)">
+      &#10084; <!-- Código de corazón Unicode -->
+    </button>
+    <div [ngClass]="{'green-bg': campo.completa, 'red-bg': !campo.completa}"></div>
+  </div>
+</ul>
