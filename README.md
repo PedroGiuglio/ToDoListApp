@@ -1,4 +1,4 @@
-# DEPPLY EN:
+# DEPLOY EN:
 
 https://listtodopg.netlify.app/
 
