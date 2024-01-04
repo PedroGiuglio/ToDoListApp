@@ -54,11 +54,11 @@ export class ToDoComponentComponent {
 
   ToDoList:any[] = [
     { nombre: "Code refractor", idTarea: 1, completa: true, seleccionado: false },
-    { nombre: "Clean CSS", idTarea: 2, completa: false, seleccionado: false },
+    { nombre: "Call with the team", idTarea: 2, completa: false, seleccionado: false },
     { nombre: "Remodularización código", idTarea: 3, completa: true, seleccionado: false },
-    { nombre: "Code refractor", idTarea: 4, completa: true, seleccionado: false },
-    { nombre: "Clean CSS", idTarea: 5, completa: false, seleccionado: false },
-    { nombre: "Remodularización código", idTarea: 6, completa: true, seleccionado: false },
+    { nombre: "Css changes", idTarea: 4, completa: true, seleccionado: false },
+    { nombre: "Api solutions", idTarea: 5, completa: false, seleccionado: false },
+    { nombre: "Fix bug screen 764 px", idTarea: 6, completa: true, seleccionado: false },
     { nombre: "Code refractor", idTarea: 7, completa: true, seleccionado: false },
     { nombre: "Clean CSS", idTarea: 8, completa: false, seleccionado: false },
     { nombre: "Remodularización código", idTarea: 9, completa: true, seleccionado: false }

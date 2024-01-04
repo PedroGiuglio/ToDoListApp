@@ -911,7 +911,7 @@ img{
     width: 70%; /* La segunda columna ocupa el 95% del ancho */
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     
   }
   
@@ -953,7 +953,7 @@ img{
       color: white;
       font-size: 50px;
       margin-left: 50px;
-      margin-top: 50px;
+      margin-top: 30px;      
     }
   
   .homeWork h5{
@@ -967,7 +967,7 @@ img{
         color: white;
         font-size: 50px;
         margin-left: 50px;
-        margin-top: 50px;
+        margin-top: 30px;     
       }
     
     .home h5{
@@ -981,7 +981,7 @@ img{
         color: white;
         font-size: 50px;
         margin-left: 50px;
-        margin-top: 50px;
+        margin-top: 30px;     
       }
     
     .homeVacation h5{
@@ -990,26 +990,54 @@ img{
         margin-left: 50px;
       }
 
-    .sectionItems{
-    height: 400px;
-    margin-top: -15px;
-  }
-  
-  .item{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-      width: 80%;
-      height: 60px;
-      font-size: 18px;
-      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      border-radius: 10px;
-      background-color: #ffffff;
-      margin-left: 50px;
-      list-style: none;
-  }
-  
+      .sectionItems{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      
+      .sectionItems .item{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 80%;
+          font-size: 18px;
+          font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background-color: #ffffff;
+          list-style: none;
+          height: 50px;
+          border-radius: 5px;
+          box-shadow: 0px 7px 5px 1px rgba(0,0,0,0.52);
+          -webkit-box-shadow: 0px 7px 5px 1px rgba(0,0,0,0.52);
+          -moz-box-shadow: 0px 7px 5px 1px rgba(0,0,0,0.52);
+      }
+      
+      .item .first{
+        width: 70%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+      }
+      
+      
+      .item label{
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+      }
+
+       .tareas{
+        width: 30%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
   .item .sectionTarea{
     display: flex;
     flex-direction: column;
@@ -1017,36 +1045,46 @@ img{
     text-align: left;
   }
   
-  .item .id{
-    color: gray;
-    font-size: 15px;
-    font-weight: bold;
-  }
   
-  .btnSwitch{
+  #flexCheckDefault{
       height: 20px;
+      margin-right: 20px;
   }
   
-  .guion{
-      height: 3px;
-      background-color: black;
+  .item .form-check-label{
+    margin-top: 4px;
+    margin-left: 45px;
+    width: 80%;
+    font-size: 25px;
+    justify-content: left;
   }
-  
-  .color-rojo{
-      background-color:red;
-  }
-  
-  .color-verde{
-      background-color: green;
-  }
+
   
   .font-tachado{
       text-decoration: line-through;
       color: rgb(0, 0, 0);
   }
+
+  .item .tareas{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .green-bg {
+    width: 20px; 
+    height: 20px;
+    background-color: green; 
+    border-radius: 50%; 
+    margin-left: 15px;
+  }
   
-  .btn{
-    margin-top: 3px;
+  .red-bg {
+    width: 20px; 
+    height: 20px;
+    border-radius: 50%; 
+    background-color: #fe391f;
+    margin-left: 15px;
   }
   
 .transparent-button .buttonAddTarea{
@@ -1076,7 +1114,7 @@ img{
   }
   
   .modal-dialog {
-     width: 700px;
+     width: 70%;
      font-weight: bold;
     }
   
@@ -1129,24 +1167,39 @@ img{
     }
   
     .heart-button {
-      background-color: transparent; /* Fondo transparente */
-      border: none; /* Sin borde */
-      font-size: 30px; /* Tamaño de fuente */
-      color: rgb(150, 150, 150); /* Color de la estrella */
+      display: inline-block;
+      background: none;
+      border: none;
+      color: rgb(148, 148, 148); /* Color inicial del corazón */
+      font-size: 24px;
       cursor: pointer;
+      transition: color 0.3s ease; /* Agregar transición de color para el efecto visual */
+    }
+  
+    .heart-button:hover {
+      color: gold; /* Cambiar el color al pasar el mouse */
+    }
+  
+    .heart-button.selected {
+      color: gold; /* Color de corazón seleccionado */
+    }
+  
+    .heart-button span {
+      transform: scale(1, 0.8) ; /* Aplicar transformación para dar forma de corazón */
+      display: inline-block;
+      transition: transform 0.3s ease; /* Agregar transición para el efecto visual */
     }
     
-    /* Cambia el color de la estrella al pasar el cursor por encima */
-    .heart-button:hover {
-      color: rgb(255, 221, 0); /* Cambia el color al pasar el cursor */
+    .heart-button:hover span {
+      transform: scale(1.2, 0.8) rotate(45deg); /* Cambiar la transformación al pasar el mouse */
     }
-  
+    
     .mi-clase{
-      background-color:	#FFD700;
+      background-color:	 gold !important;
     }
   
-    .mi-clase .heart-button:hover{
-      color: white;
+    .mi-clase .heart-button {
+      color: rgb(148, 148, 148); /* Color inicial del corazón */
     }
   
     .bi-trash:hover{
@@ -1157,31 +1210,36 @@ img{
     .btnFilters{
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: start;
       align-items: center;
       background-color: #030c39;
       border-color: #030c39;
       height: 80vh;
     }
   
-  
-    .filtersButton .btnDestacado{
+    .btnFilters .filtro{
+      margin-top: 120px;
+      margin-right: 20px;
+    }
+
+    .btnFilters .btnDestacado{
       display: flex;
-      flex-direction: row;
-      justify-content: right;
-      width: 50%;
-      margin-left: 430px;
+      flex-direction: column;
+    }
+
+    .btnFilters .btnDestacado .btn-danger{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 180px;
+      width: 50px;
     }
   
     .btnDestacado .btnPagination{
       height: 5px;
     }
  
-    
-    .imgProfile{
-      background-color: red;
-    }
-
     .boxPagination{
       width: 100%;
       display: flex;

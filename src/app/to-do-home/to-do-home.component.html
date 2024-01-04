@@ -88,7 +88,7 @@
     <ul  *ngFor="let campo of ToDoList.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)" class="item" [class.mi-clase]="campo.seleccionado">
       <div class="form-check form-switch first">
         <input class="form-check-input" type="checkbox"  [(ngModel)]="campo.completa" value="" id="flexCheckDefault">
-        <label class="form-check-label" for="flexSwitchCheckDefault" style="margin-left: 10px;"  [ngClass]="{'font-tachado': campo.completa}">{{campo.nombre}}</label>
+        <label class="form-check-label" for="flexSwitchCheckDefault"   [ngClass]="{'font-tachado': campo.completa}">{{campo.nombre}}</label>
       </div>
       <div class="tareas">
         <button class="heart-button" (click)="toggleClase(campo)">
