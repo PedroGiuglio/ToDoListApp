@@ -117,6 +117,7 @@ img{
   flex-direction: column;
   height: 100vh;
   width: 100%;
+  background-color: #4343ff;
 }
 
 .column-1{
@@ -137,12 +138,11 @@ img{
   height: 10vh;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: left;
   align-items: center;
 }
 
 .userLogin .userNombre{
-  margin-left: 15px;
   font-size: 18px;
 }
 
@@ -183,10 +183,10 @@ img{
 }
 
 .buttons h4{
-  color: black;
   font-weight: bold;
   margin-left: 25px;
   margin-top: 10px;
+  color: white;
 }
 
 .rutas{
@@ -195,6 +195,7 @@ img{
   justify-content: left;
   align-items: center;
   width: 100%;
+  height: 15vh;
 }
 
 .rutas .sectionButton{
@@ -286,7 +287,7 @@ img{
 }
 
 
-.homeWork h1{
+.column-2 h1{
     color: white;
     font-size: 50px;
     width: 100%;
@@ -554,8 +555,7 @@ img{
 
   .btnFilters .filtro{
     margin-left: 25px;
-    color: white;
-    background-color: rgb(181, 181, 181);
+    background-color: white;
   }
 
   .dropdown{
@@ -824,185 +824,212 @@ img{
 /*PROBAMOS*/
 
 .prueba{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: #0695fd;
-  }
-  
-  .hola {
-    height: 100vh;
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .hola .column-1 {
-    height: 80vh;
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items:center;
-    background-color: #030c39;
-  }
-  
-  .rutas .sectionButton{
-    width: 120px;
-    height: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    text-decoration: none;
-    color: white;
-    /* background-color: rgb(0, 0, 128); */
-    background-color: #0695fd;
-    border-radius: 5px;
-    box-shadow: 0px 4px 5px 1px rgba(0,0,0,0.18);
-    -webkit-box-shadow: 0px 4px 5px 1px rgba(0,0,0,0.18);
-    -moz-box-shadow: 0px 4px 5px 1px rgba(0,0,0,0.18);
-    margin-bottom: 10px;
-  }
-  
-  .sectionButton svg {
-    width: 25px;
-    height: 25px;
-    margin-bottom: 10px;
-  }
-  
-  .sectionButton p{
-    margin: 0;
-  }
-  
-  .sectionButton:hover{
-    color: rgb(98, 87, 255);
-  }
-  
-  .work{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    text-align: center;
-  }
-  
-  .buttons .sectionButton .work .valorRecibido{
-    margin-left: 15px;
-    color: gray;
-  }
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #aaa;
+  background-image:url('images/wavess.jpg');
+  background-position: center;
+  background-size: cover;
+}
 
-  .buttonNav{
-    background-color: aquamarine;
-    width: 40px; /* Define el ancho del botón */
-    height: 40px;
-    border: none; /* Quita el borde del botón */
-    border-radius: 50%; /* Establece el radio para hacerlo circular */
-  }
+.hola {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+  width: 80%;
+  background-color: #4343ff;
+}
+
+.column-1{
+  height: 30vh;
+}
+
+.sectionLogin{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-image:url('images/work.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 10vh;
+}
+
+.userLogin{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  color: black;
+  width: 70%;
+}
+
+.userLogin .userNombre{
+  font-size: 18px;
+}
+
+.userLogin .userNombre span{
+  font-weight: bold;
+}
+
+.imgProfile{
+  margin-left: 15px;
+  width: 50px;
+  height: 50px;
+  background-color: none;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.buttons .seccionHora{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons .seccionHora .horaFormateada{
+  width: 200px;
+  height: 30px;
+  margin-left: 25px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  border:none;
+  background-color: white;
+  font-weight: bold;
+}
+
+.buttons h4{
+  color: white;
+  font-weight: bold;
+  margin-left: 25px;
+  margin-top: 10px;
+  height: auto;
+}
+
+.rutas{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 18vh;
+}
+
+.rutas .sectionButton{
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  background-color: #0695fd;
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-left: 25px;
+}
+
+.sectionButton svg {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 10px;
+}
+
+.sectionButton p{
+  margin: 0;
+}
+
+.sectionButton:hover{
+  color: rgb(98, 87, 255);
+}
+
+
+
+.work{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.buttons .sectionButton .work .valorRecibido{
+  color: rgb(181, 181, 181);
+  font-size: 15px;
+}
+
+.buttonNav{
+ display: none;
+}
   
-  .hola .column-2 {
-    width: 70%; /* La segunda columna ocupa el 95% del ancho */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-  }
+.hola .column-2 {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  background-color: #4343ff;
+  width: 100%;
   
-  .hola .homeWork {
-    display: flex;
-    flex-direction: column;
-    height: 80vh;
-    background-image: url('images/work.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-  }
+}
   
   .hola .home {
     display: flex;
     flex-direction: column;
     height: 80vh;
-    background-image: url('images/home.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 100%;
   }
 
-  .hola .homeVacation {
-    display: flex;
-    flex-direction: column;
-    height: 80vh;
-    background-image: url('images/wood.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-  }
+ 
+  .hola h5{
+      color: white;
+    }
 
-  .homeWork h1{
-      text-align: left;
+    .firstLine {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+    }
+    
+    .sectionTitle {
+      width: 90%;
+      display: flex;
+      justify-content: flex-start; /* Alinea a la izquierda */
+      align-items: center;
+    }
+    
+    .sectionTitle h1 {
+      display: flex;
+      align-items: center;
       color: white;
       font-size: 50px;
-      margin-left: 50px;
-      margin-top: 30px;      
+      margin-top: 15px;
     }
-  
-  .homeWork h5{
-      color: white;
-      font-size: 25px;
-      margin-left: 50px;
-    }
-
-    .home h1{
-        text-align: left;
-        color: white;
-        font-size: 50px;
-        margin-left: 50px;
-        margin-top: 30px;     
-      }
-    
-    .home h5{
-        color: white;
-        font-size: 25px;
-        margin-left: 50px;
-      }
-
-      .homeVacation h1{
-        text-align: left;
-        color: white;
-        font-size: 50px;
-        margin-left: 50px;
-        margin-top: 30px;     
-      }
-    
-    .homeVacation h5{
-        color: white;
-        font-size: 25px;
-        margin-left: 50px;
-      }
-
-      .sectionItems{
+ 
+  .sectionItems{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-      }
+  }
       
       
       .sectionItems .item{
           display: flex;
           flex-direction: row;
           justify-content: space-between;
-          width: 80%;
+          width: 90%;
           font-size: 18px;
           font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
           background-color: #ffffff;
@@ -1118,6 +1145,14 @@ img{
      font-weight: bold;
     }
   
+
+    .areaButton{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     .transparent-button {
       background-color: rgba(0, 0, 0, 0.5); /* Color gris con opacidad 0.5 */
       color: #fff; /* Color del texto (blanco en este caso) */
@@ -1125,11 +1160,10 @@ img{
       border: none; /* Quita el borde si lo deseas */
       cursor: pointer; /* Cambia el cursor al pasar por encima del botón */
       border-radius: 5px; /* Bordes redondeados */
-      width: 80%;
+      width: 90%;
       height: 50px;
       display: flex;
       align-items: center;
-      margin-left: 50px;
     }
   
     .more {
@@ -1209,31 +1243,33 @@ img{
   
     .btnFilters{
       display: flex;
-      flex-direction: column;
-      justify-content: start;
-      align-items: center;
-      background-color: #030c39;
-      border-color: #030c39;
-      height: 80vh;
+      flex-direction: row;
+      justify-content: right;
+      width: 90%;
+    }
+
+    .btnFilters .dropdown{
+      display:flex;
+      justify-content: left;
     }
   
     .btnFilters .filtro{
-      margin-top: 120px;
-      margin-right: 20px;
+      background-color: white;
     }
 
     .btnFilters .btnDestacado{
       display: flex;
       flex-direction: column;
+      margin-left: 5px;
     }
 
     .btnFilters .btnDestacado .btn-danger{
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
       height: 180px;
-      width: 50px;
+      width: 180px;
     }
   
     .btnDestacado .btnPagination{
